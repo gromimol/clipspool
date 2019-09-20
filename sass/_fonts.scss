@@ -1,13 +1,56 @@
 @font-face {
-	font-family: "PTSans";
-	src: url("../font/PTSansRegular.woff") format("woff");
+	font-family: "OpenSans";
+	src: url("../font/OpenSans/OpenSans-ExtraBold.woff") format("woff");
+	font-style: normal;
+	font-weight: 800;
+}
+@font-face {
+	font-family: "OpenSans";
+	src: url("../font/OpenSans/OpenSans-Bold.woff") format("woff");
+	font-style: normal;
+	font-weight: 700;
+}
+@font-face {
+	font-family: "OpenSans";
+	src: url("../font/OpenSans/OpenSans-SemiBold.woff") format("woff");
+	font-style: normal;
+	font-weight: 600;
+}
+@font-face {
+	font-family: "OpenSans";
+	src: url("../font/OpenSans/OpenSans-Regular.woff") format("woff");
 	font-style: normal;
 	font-weight: 400;
 }
 @font-face {
-	font-family: "PTSans";
-	src: url("../font/PTSansBold.woff") format("woff");
+	font-family: "OpenSans";
+	src: url("../font/OpenSans/OpenSans-Light.woff") format("woff");
+	font-style: normal;
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: "Ginora";
+	src: url("../font/Ginora/GinóraSansBold.woff") format("woff");
 	font-style: normal;
 	font-weight: 700;
+}
+@font-face {
+	font-family: "Ginora";
+	src: url("../font/Ginora/GinóraSansSemi Bold.woff") format("woff");
+	font-style: normal;
+	font-weight: 600;
+}
+@font-face {
+	font-family: "Ginora";
+	src: url("../font/Ginora/GinóraSansRegular.woff") format("woff");
+	font-style: normal;
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Ginora";
+	src: url("../font/Ginora/GinóraSansLight.woff") format("woff");
+	font-style: normal;
+	font-weight: 300;
 }
 

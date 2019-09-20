@@ -1,4 +1,17 @@
 :root{
+	--violet: #330847;
+	--blue: #3567df;
+	--grey: #9d9d9d;
+	--black: #191b25;
+	--border-color: #d4d5d7;
+	--border-color-grey: #a9a9a8;
+
+	--grey-bg: #f7f7f7;
+
+	--opensans: "OpenSans" ,sans-serif;
+	--ginora: "Ginora", sans-serif;
+
+	--blue-gradient: linear-gradient(to bottom, #3567df 0%, #1b52d4 100%);
 }
 html, body{
 	min-height: 100%;
@@ -7,8 +20,17 @@ html{
 	font-size: 10px;
 }
 body{
+	background-color: #fff;
+	font-family: var(--opensans);
+	font-weight: 400;
+	color: var(--black);
+	font-size: 1.4em;
+}
+.noscroll{
+	overflow: hidden !important;
 }
 a{
+	color: var(--black);
 	transition: all .2s;
 }
 .wrapper{
@@ -52,11 +74,68 @@ a{
 	}
 
 }
+.justify{
+	&--end{
+		justify-content: flex-end;
+	}
+}
 
-::-webkit-input-placeholder {  }
-::-moz-placeholder          {  } /* Firefox 19+ */
-:-moz-placeholder           {  } /* Firefox 18- */
-:-ms-input-placeholder      {  }
+.btn{
+	display: inline-block;
+	font-size: 1em;
+	text-transform: uppercase;
+	padding: 1em 2em;
+	border-radius: 5px;
+	color: var(--blue);
+	font-weight: 600;
+	position: relative;
+	overflow: hidden;
+	span{
+		position: relative;
+		z-index: 1;
+	}
+	&--simple{
+		background-color: transparent;
+		&:hover{
+			box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+			transform: translateY(-3px);	
+			box-shadow: 0 6px 15px -2px rgba(0, 0, 0, 0.2);	
+		}
+		&:active{
+			opacity: 1;
+			transform: translateY(0);
+			box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2)
+		}
+		
+	}
+	&--blue{
+		color: #fff;
+		box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2), inset 0 3px 3px rgba(80, 125, 232, 0.53);
+		background: var(--blue-gradient);
+		&:hover{
+			opacity: .9;
+			transform: translateY(-3px);	
+			box-shadow: 0 6px 7px -2px rgba(0, 0, 0, 0.6);	
+		}
+		&:active{
+			opacity: 1;
+			transform: translateY(0);
+			box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2)
+		}
+	}
+	&--lg{
+		font-size: 1.0714em;
+	}
+}
+
+
+.svg-sprite{
+	display: none;
+}
+::-webkit-input-placeholder {font-family: var(--opensans);font-size: 14px;color: var(--grey);  }
+::-moz-placeholder          {font-family: var(--opensans);font-size: 14px;color: var(--grey);  } /* Firefox 19+ */
+:-moz-placeholder           {font-family: var(--opensans);font-size: 14px;color: var(--grey);  } /* Firefox 18- */
+:-ms-input-placeholder      {font-family: var(--opensans);font-size: 14px;color: var(--grey);  }
 
 // Для стилей автозаполнения полей
 // @-webkit-keyframes autofill {
