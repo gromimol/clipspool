@@ -17,14 +17,13 @@ html, body{
 	min-height: 100%;
 }
 html{
-	font-size: 10px;
+	font-size: 14px;
 }
 body{
 	background-color: #fff;
 	font-family: var(--opensans);
 	font-weight: 400;
 	color: var(--black);
-	font-size: 1.4em;
 }
 .noscroll{
 	overflow: hidden !important;
@@ -78,6 +77,9 @@ a{
 	&--end{
 		justify-content: flex-end;
 	}
+	&--center{
+		justify-content: center;
+	}
 }
 
 .btn{
@@ -112,6 +114,7 @@ a{
 		color: #fff;
 		box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2), inset 0 3px 3px rgba(80, 125, 232, 0.53);
 		background: var(--blue-gradient);
+		border: 1px solid var(--blue);
 		&:hover{
 			opacity: .9;
 			transform: translateY(-3px);	
@@ -123,8 +126,51 @@ a{
 			box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2)
 		}
 	}
+	&--border{
+		border: 1px solid currentColor;
+	}
+	&--round{
+		border-radius: 20px 5px 5px 20px;
+		position: relative;
+		padding-left: 3em;
+		&:hover{
+			.ico{
+				color: var(--blue);
+				background-color: #fff;
+			}
+		}
+	}
+	&--white{
+		color: #fff;
+		&:hover{
+			color: var(--blue);
+			opacity: .9;
+			transform: translateY(-3px);	
+			box-shadow: 0 6px 7px -2px rgba(0, 0, 0, 0.6);	
+			text-shadow: 1px 1px  rgba(#fff, .6);
+		}
+	}
 	&--lg{
 		font-size: 1.0714em;
+	}
+	.ico{
+		position: absolute;
+		left: .3em;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 2.3em;
+		height: 2.3em;
+		border-radius: 50%;
+		color: #fff;
+		background-color: #184ac1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all .3s;
+		svg{
+			width: 60%;
+			height: 60%;
+		}
 	}
 }
 
