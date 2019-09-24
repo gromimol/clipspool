@@ -2666,7 +2666,7 @@ html {
             transform: translate(-50%, -50%); }
   .models-avatar .social {
     position: absolute;
-    bottom: 2em;
+    bottom: 3.5em;
     left: 0;
     width: 100%;
     -webkit-box-pack: center;
