@@ -1,0 +1,13 @@
+/*models-content*/ 
+.tab-content{
+	display: none;
+	padding: 3.5714em 0;
+	&.active{
+		display: block;
+	}
+	.aside{
+		.btn-container{
+			padding: 15px 0;
+		}
+	}
+}

@@ -2,7 +2,9 @@
 	--violet: #330847;
 	--blue: #3567df;
 	--grey: #9d9d9d;
+	--grey-dark: #676767;
 	--black: #191b25;
+	--red: #ff0128;
 	--border-color: #d4d5d7;
 	--border-color-grey: #a9a9a8;
 
@@ -28,6 +30,9 @@ body{
 .noscroll{
 	overflow: hidden !important;
 }
+img{
+	max-width: 100%;
+}
 a{
 	color: var(--black);
 	transition: all .2s;
@@ -36,6 +41,7 @@ a{
 	height: 100%;
 	display: flex;
 	flex-direction: column;
+	overflow-x: hidden;
 }
 .container{
 }
@@ -70,6 +76,9 @@ a{
 		-webkit-justify-content: space-between;
 		-ms-flex-pack: justify;
 		justify-content: space-between;
+	}
+	&--column{
+		flex-direction: column;
 	}
 
 }
@@ -128,6 +137,32 @@ a{
 	}
 	&--border{
 		border: 1px solid currentColor;
+		&:hover{
+			background-color: var(--blue);
+			color: #fff;
+			border-color: var(--blue);
+		}
+	}
+	&--border-grey{
+		border: 1px solid var(--border-color);
+		&:hover{
+			background-color: var(--blue);
+			color: #fff;
+			border-color: var(--blue);
+		}
+	}
+	&--lt{
+		padding: 10px;
+		span.ico{
+			width: 1.7142em;
+			height: 1.7142em;
+		}
+		&.btn--round{
+			padding-left: 2.4em;
+		}
+	}
+	&--lg{
+		font-size: 1.0714em;
 	}
 	&--round{
 		border-radius: 20px 5px 5px 20px;
@@ -143,16 +178,14 @@ a{
 	&--white{
 		color: #fff;
 		&:hover{
-			color: var(--blue);
+			color:#fff;
 			opacity: .9;
 			transform: translateY(-3px);	
 			box-shadow: 0 6px 7px -2px rgba(0, 0, 0, 0.6);	
-			text-shadow: 1px 1px  rgba(#fff, .6);
+			border-color: var(--blue);
 		}
 	}
-	&--lg{
-		font-size: 1.0714em;
-	}
+
 	.ico{
 		position: absolute;
 		left: .3em;
@@ -167,6 +200,11 @@ a{
 		align-items: center;
 		justify-content: center;
 		transition: all .3s;
+		&--white{
+			color: var(--blue);
+			background-color: #fff;
+			border: 1px solid var(--border-color);
+		}
 		svg{
 			width: 60%;
 			height: 60%;
@@ -174,6 +212,32 @@ a{
 	}
 }
 
+h2{
+	font-size: 1.7142em;
+	text-transform: uppercase;
+	font-family: "Ginora", sans-serif;
+	margin-bottom: 1.25em;
+}
+
+.blue{
+	color: var(--blue);
+}
+
+.grey{
+	color: var(--grey-dark);
+}
+
+.text-center{
+	text-align: center;
+}
+
+.dollar{
+	&::before{
+		content: '$';
+		display: inline-block;
+		padding-right: 2px;
+	}
+}
 
 .svg-sprite{
 	display: none;
