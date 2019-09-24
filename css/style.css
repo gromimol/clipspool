@@ -2743,7 +2743,9 @@ html {
       height: 100%; }
 
 .models-header__name {
+  font-size: 1em;
   margin-right: .55em;
+  margin-bottom: 0;
   font-weight: 600; }
 
 .models-header__descr {
@@ -2867,7 +2869,13 @@ html {
   height: 5.7142em; }
   .models-menu li {
     position: relative;
-    padding: 0 2.5714em; }
+    padding: 0 2.5714em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .models-menu li::after {
       content: '';
       width: 70%;
@@ -2886,28 +2894,20 @@ html {
     .models-menu li.active .models-menu__title, .models-menu li:hover .models-menu__title {
       color: blue; }
     .models-menu li a {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      height: 100%;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
       text-align: center;
-      font-size: 1rem; }
+      font-size: 1rem;
+      position: relative; }
     .models-menu li .count {
       font-size: .7857em;
       text-transform: uppercase;
       letter-spacing: 0.55px;
       color: var(--grey-dark);
-      margin-top: .5em; }
+      margin-top: .5em;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      text-align: center; }
 
 .models-menu__title {
   text-transform: uppercase;
