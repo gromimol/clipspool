@@ -3,39 +3,44 @@
 	background-color: var(--grey-bg);
 	border-bottom: 1px solid var(--border-color);
 }
-.models-menu{
+.models-menu,
+.models-menu.nav{
 	margin: 0 -2.5714em;
 	height: 5.7142em;
-	li{
+	.nav-item{
 		position: relative;
 		padding: 0 2.5714em;
-		display: flex;
-		align-items: center;
-		&::after{
-			content: '';
-			width: 70%;
-			height: 1px;
-			background-color: #3567df;
-			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
-			bottom: 0;
-			opacity: 0;
-			transition: all .3s;
-		}
-		&.active,
-		&:hover{
-			&::after{
-				opacity: 1;
-			}
-			.models-menu__title{
-				color: blue
-			}
-		}
-		a{
+		
+		.nav-link{
+			color: var(--violet);
 			text-align: center;
 			font-size: 1rem;
 			position: relative;
+			display: flex;
+			align-items: center;
+			height: 100%;
+			background-color: transparent;
+			&::after{
+				content: '';
+				width: 150%;
+				height: 1px;
+				background-color: #3567df;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: -1px;
+				opacity: 0;
+				transition: all .3s;
+			}
+			&.active,
+			&:hover{
+				&::after{
+					opacity: 1;
+				}
+				.models-menu__title{
+					color: blue
+				}
+			}
 		}
 		.count{
 			font-size: .7857em;
@@ -44,7 +49,7 @@
 			color: var(--grey-dark);
 			margin-top: .5em;
 			position: absolute;
-			top: 100%;
+			bottom: 1em;
 			left: 0;
 			right: 0;
 			text-align: center;
@@ -60,11 +65,13 @@
 	.bage{
 		flex: none;
 		font-size: .7857em;
+		width: 1.25rem;
+		height: 1.25rem;
 		color: #fff;
-		padding: 3px 5px;
 		border-radius: 50%;
 		background-color: var(--red);
 		margin-left: .75em;
+		line-height: 1;
 	}
 }
 

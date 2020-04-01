@@ -1,0 +1,26 @@
+/*model video*/ 
+.title-row{
+	margin-bottom: 20px;
+	.filter-row{
+		margin-bottom: 0;
+	}
+}
+.model-item-options{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	.burger{
+		display: flex;
+		flex: none;
+		width: 25px;
+		height: 25px;
+		padding: 5px;
+		border-radius: 5px;
+		background-color: rgba(#000, .8);
+		color: #fff;
+		&:hover,
+		&.active{
+			background-color: var(--blue);
+		}
+	}
+}

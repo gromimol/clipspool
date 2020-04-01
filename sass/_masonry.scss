@@ -1,0 +1,11 @@
+/*masonry*/ 
+.masonry-container{
+	margin-bottom: 50px;
+	.grid-sizer,
+	.model-item{
+		width: calc(25% - 15px);
+	}
+	.model-item{
+		margin-bottom: 30px;
+	}
+}

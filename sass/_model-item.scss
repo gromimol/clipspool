@@ -1,17 +1,64 @@
 /*model-item*/ 
 .model-item{
 	margin-bottom: 2em;
+	&--premium{
+		.model-item__photo{
+			overflow: hidden;
+			border-radius: 5px;
+			margin-bottom: 14px;
+			&::before{
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: rgba(#000, .4);
+				z-index: 1;
+			}
+		}
+		.model-item__photo > a > img{
+			filter: blur(5px);
+		}
+	}
+	&--shadow{
+		background-color: var(--grey-bg);
+		transition: all .3s;
+		&:hover{
+			background-color: #fff;
+			box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.08);
+			.model__item__options{
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	&--rounded{
+		border-radius: 40px 40px 10px 10px;
+		.model-photo{
+			border-radius: 40px 40px 0 0;
+		}
+		.model__item__options{
+			bottom: 0;
+			left: 0;
+			opacity: 0;
+			visibility: hidden;
+			transition: all .3s;
+		}
+	}
 }
 .model-item__photo{
 	position: relative;
 	margin-bottom: .5em;
+	
 	img{
 		border-radius: 5px;
+		width: 100%;
 	}
 	.duration{
 		position: absolute;
-		bottom: 5px;
-		left: 5px;
+		bottom: 10px;
+		left: 10px;
 		font-size: .7857em;
 		color: #fff;
 		padding: .5em;
@@ -21,30 +68,49 @@
 	}
 	.format{
 		font-size: .8571em;
+		line-height: 1;
 		font-weight: 600;
 		text-transform: uppercase;
 		padding: .5em;
 		border-radius: 5px;
 		background-color: rgba(#fff, .8);
 		position: absolute;
-		top: 5px;
-		right: 5px;
+		top: 10px;
+		left: 10px;
 		z-index: 1;
-	}
-	.play-btn{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 3em;
-		height: 3em;
-		border-radius: 50%;
-		background:transparent url('../img/icons/play_button.svg') center no-repeat;
-		background-size: contain;
-		z-index: 3;
-		&:hover{
-			opacity: .7;
+		&--black{
+			background-color: rgba(#000, .8);
+			color: #fff;
 		}
+	}
+	.badge{
+		position: absolute;
+		top: 15px;
+		right: 20px;
+		line-height: 1.1;
+		font-weight: 400;
+	}
+	.badge-number{
+		font-size: 18px;
+	}
+	.badge-text{
+		font-size: 11px;
+		text-transform: uppercase;
+	}
+}
+.play-btn{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 3em;
+	height: 3em;
+	border-radius: 50%;
+	background:transparent url('../img/icons/play_button.svg') center no-repeat;
+	background-size: contain;
+	z-index: 3;
+	&:hover{
+		opacity: .7;
 	}
 }
 .model-item__photo__small{
@@ -65,6 +131,10 @@
 
 .model__item__options{
 	margin-bottom: 10px;
+	li{
+		flex-direction: column;
+		justify-content: space-between;
+	}
 	li:not(:last-child){
 		padding-right: .7142em;
 		margin-right: .7142em;
@@ -95,6 +165,21 @@
 			}
 		}
 	}
+	&--lg{
+		text-align: center;
+		li{
+			flex-grow: 1;
+		}
+		.count{
+			font-size: 18px;
+			color: #330847;
+		}
+		.subtitle{
+			font-size: 12px;
+			color: #909090;
+			text-transform: capitalize;
+		}
+	}
 }
 .options-title{
 	display: block;
@@ -118,8 +203,98 @@
 	}
 }
 
+.model-item__title{
+	display: block;
+	color: #1e1f20;
+	font-size: 14px;
+	white-space: nowrap;
+	overflow: hidden;
+	line-height: 1.3;
+	text-overflow: ellipsis;
+}
+a.model-item__title{
+	&:hover{
+		color: var(--blue);
+	}
+}
+.model__item__row{
+	.call-to-action{
+		padding: 10px 0;
+	}
+	.cta-item{
+		margin-bottom: 0;
+	}	
+}
+.premium-item{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+	.lock{
+		width: 4.6428em;
+		height: 5.9582em;
+		margin: 0 auto;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			// filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.5));
+		}
+	}
+	.cta-item,
+	.call-to-action--lt .cta-item--like .ico,
+	.call-to-action--lt .cta-item .ico{
+		color: #fff;
+	}
 
+}
+.premium-item__title{
+	font-size: 1.1428rem;
+	text-transform: uppercase;
+	line-height: 1.3;
+}
 
-
+.model-status{
+	margin-top: -0.5em;
+	padding: 18px 10px;
+	color: var(--black);
+	&:hover{
+		color: var(--black);
+	}
+	.model-name{
+		font-size: 14px;
+		font-weight: 600;
+		text-transform: uppercase;
+		&::after{
+			content: '';
+			flex: none;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: currentColor;
+			margin-left: 8px;
+			opacity: 0;
+		}
+	}
+	&--green{
+		color: var(--green);
+		.model-name{
+			&::after{
+				opacity: 1;
+			}
+		}
+		&:hover{
+			color: var(--green);
+		}
+	}
+}
 
 

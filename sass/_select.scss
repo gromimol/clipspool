@@ -1,0 +1,90 @@
+.select{
+  position: relative;
+  display: block;
+  flex: none;
+  width: 200px;
+  color: #cccccc;
+  vertical-align: middle;
+  text-align: left;
+  user-select: none;
+  -webkit-touch-callout: none;
+
+  .placeholder{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    background-color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--black);
+    z-index: 1;
+    padding: 5px 20px 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover{
+    }
+
+    &:after{
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      content: '';
+      width: 10px;
+      height: 5px;
+      background:transparent url('../img/icons/select_arrow.svg') left top no-repeat;
+      background-size: contain;
+      transition: all .3s;
+      z-index: 10;
+    }
+  }
+
+  &.is-open{
+    .placeholder{
+      box-shadow: var(--box-shadow);
+      border-color: var(--blue);
+    }
+    .placeholder:after{
+      transform: translateY(-50%) rotateX(180deg);
+    }
+    ul{
+      display: block;
+    }
+  }
+
+
+
+  ul{
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    overflow-y: auto;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(112, 112, 112, 0.49);
+    top: 100%;
+    left: 0;
+    list-style: none;
+    margin: 5px 0 0 0;
+    padding: 0;
+    z-index: 100;
+    li{
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      padding: 0.8em 1em 0.8em 1em;
+      color: var(--black);
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover{
+        background-color: #eef1f2;
+        color: var(--blue);
+      }
+    }
+  }
+}

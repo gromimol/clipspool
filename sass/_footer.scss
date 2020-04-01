@@ -1,4 +1,57 @@
 /*Footer*/ 
+.footer{
+	background: #050c1d url('../img/bg/footer_bg.jpg') 0 0 no-repeat;
+	background-size: cover;
+	padding: 40px 0;
+	margin-top: 50px;
+	.logo{
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+	
+	.copyright{
+		color: #777;
+		font-size: 12px;
+		text-align: right;
+		a{
+			color: currentColor;
+			&:hover{
+				color: #fff;
+			}
+		}
+	}
+}
+.footer__right{
+	.main-menu{
+		margin-bottom: 35px;
+		padding-right: 0;
+		li{
+			padding: 0 1.5em;
+			&:last-child{
+				padding-right: 0;
+			}
+			a{
+				color: #fff;
+				&::after{
+					display: none;
+				}
+				&.blue{
+					color: var(--blue);
+					&:hover{
+						color: #fff;
+					}
+				}
+				&:hover{
+					color: var(--blue);
+					&.btn{
+						color: #fff
+					}
+				}
+
+			}
+		}
+	}
+}
 .header-form-container{
 	display: none;
 }

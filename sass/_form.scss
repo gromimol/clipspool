@@ -1,0 +1,82 @@
+/*form*/ 
+.input-wrapper{
+	width: 100%;
+	textarea, 
+	input[type="text"],
+	input[type="password"],
+	input[type="email"]{
+		display: block;
+		width: 100%;
+		border: 1px solid #d4d5d7;
+		border-radius: 5px;
+		background-color: #fff;
+		font-family: "OpenSans";
+		font-size: 16px;
+		color: #606060;
+		padding-left: 1em;
+		outline: none;
+		appearance: none;
+		resize: none;
+	}
+	textarea{
+		height: 68px;
+		padding-top: 1em;
+	}
+}
+
+.checkbox-group{
+	input[type="radio"],
+	input[type="checkbox"]{
+		display: none;
+		&:checked + label{
+			background: linear-gradient(to bottom, #3567df 0%, #1b52d4 100%);
+			color: #fff;
+			&:hover{
+				color: #fff;
+			}
+		}
+	}
+	.form-check{
+		&:first-of-type{
+			.form-check-label{
+				border-radius: 5px 0 0 5px;
+				border-left: 1px solid var(--border-color);
+				&--icon{
+					border-radius: 5px;
+				}
+			}
+		}
+		&:last-of-type{
+			.form-check-label{
+				border-radius: 0 5px 5px 0;
+				&--icon{
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+	.form-check-label{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 30px;
+		border: 1px solid var(--border-color);
+		border-left: none;
+		background-color: #fff;
+		font-size: 13px;
+		text-transform: uppercase;
+		color: var(--black);
+		padding: 0 15px;
+		cursor: pointer;
+		&:hover{
+			color: var(--blue);
+		}
+	}
+	.form-check-label--icon{
+		width: 30px;
+		height: 30px;
+		padding: 0;
+		border-radius: 5px;
+		border: 1px solid var(--border-color);
+	}
+}
