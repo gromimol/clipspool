@@ -12,10 +12,23 @@ $(document).ready(function () {
 	$('#overlay, .close').on('click',function (e) {
 		e.preventDefault();
 
-		$('#overlay, .mobile-menu').removeClass('active');
+		$('#overlay, .mobile-menu, .header .submenu, .search-block').removeClass('active');
 		$('body').removeClass('noscroll');
 		// $('.mobile-menu').addClass('active');
 	});
+
+	// mobile filters
+	$('.filter-btn').on('click', function (e) {
+		e.preventDefault();
+
+		$(this).toggleClass('active');
+		$('.filter-container').toggleClass('visible');
+	})
+
+	// mobile-search
+	$('.js--search-block-btn').on('click', function () {
+		$('.search-block').addClass('active');
+	})
 
 	// tabs
 

@@ -202,28 +202,6 @@ a{
     transform: scale3d(1, 1, 1);
   }
 }
-// Для стилей автозаполнения полей
-// @-webkit-keyframes autofill {
-//     to {
-//         color: #fff;
-//         background: transparent;
-//     }
-// }
-
-// input:-webkit-autofill {
-//     -webkit-animation-name: autofill;
-//     -webkit-animation-fill-mode: both;
-// }
-
-/* хром, сафари */
-.element::-webkit-scrollbar { width: 0; }
-
-/* ie 10+ */
-.element { -ms-overflow-style: none; }
-
-/* фф (свойство больше не работает, других способов тоже нет)*/
-.element { overflow: -moz-scrollbars-none; }
-
 
 
 
