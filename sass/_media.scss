@@ -61,6 +61,15 @@
 			width: 120px;
 		}
 	}
+	.footer{
+		.logo{
+			width: 180px;
+			margin-bottom: 40px;
+			img{
+				width: 180px;
+			}
+		}
+	}
 	.models-slider-block,
 	.models-menu-block{
 		.col-sm-9.offset-lg-3{
@@ -467,6 +476,96 @@
 			font-size: 12px;
 		}
 	}
+	.footer__right{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.social{
+			margin-bottom: 40px;
+			li{
+				a{
+					width: 30px;
+					height: 30px;
+					border: none;
+				}
+			}
+		}
+	}
+	.footer__right .main-menu{
+		margin-bottom: 0;
+	}
+	.footer__right .main-menu li{
+		padding: 0 .7em;
+		margin-bottom: 30px;
+	}
+	.footer__right .main-menu li:last-child,
+	.footer__right .main-menu li:nth-last-child(2){
+		width: 30%;
+		text-align: center;
+	}
+	.page-link.prev-page, .page-link.next-page{
+		width: 40px;
+		height: 40px;
+		padding: .5rem;
+	}
+	.page-link.prev-page{
+		margin-right: 10px;
+	}
+	.page-link.next-page{
+		margin-left: 10px;
+	}
+	.premium-text + .btn{
+		font-size: 12px;
+	}
+	.filter-container{
+		padding-top: 20px;
+		margin-top: 20px;
+		position: relative;
+		&::before{
+			content: '';
+			width: calc(100% + 30px);
+			left: -15px;
+			top: 0;
+			position: absolute;
+			height: 1px;
+			background-color: #e5e5e5;
+		}
+	}
+	.filter-container{
+		display: none !important;
+		&.visible{
+			display: -webkit-flex !important;
+			display: -moz-flex !important;
+			display: -ms-flex !important;
+			display: -o-flex !important;
+			display: flex !important;
+		}
+		.search-form{
+			max-width: 300px;
+		}
+		.form-group{
+			width: 47%;
+		}
+	}
+	.option-row .tab-list .nav-item:first-child .nav-link{
+		border-radius: 5px 0 0 5px
+	}
+	.tab-list .nav-item:last-child .nav-link{
+		border-radius: 0 5px 5px 0
+	}
+	.option-row .nav-tabs{
+		border: none;
+	}
+	.option-row .page-features{
+		padding-bottom: 20px;
+	}
+	.option-row .tab-list .nav-link{
+		border-bottom: 1px solid var(--border-color);
+	}
+	.option-row .tab-list .nav-link.active::after{
+		display: none;
+	}
+
 }
 /*767*/ 
 
@@ -502,34 +601,7 @@
 	.tab-list .nav-link{
 		padding: 15px;
 	}
-	.filter-container{
-		display: none !important;
-		&.visible{
-			display: -webkit-flex !important;
-			display: -moz-flex !important;
-			display: -ms-flex !important;
-			display: -o-flex !important;
-			display: flex !important;
-		}
-	}
-	.option-row .tab-list .nav-item:first-child .nav-link{
-		border-radius: 5px 0 0 5px
-	}
-	.tab-list .nav-item:last-child .nav-link{
-		border-radius: 0 5px 5px 0
-	}
-	.option-row .nav-tabs{
-		border: none;
-	}
-	.option-row .page-features{
-		padding-bottom: 20px;
-	}
-	.option-row .tab-list .nav-link{
-		border-bottom: 1px solid var(--border-color);
-	}
-	.option-row .tab-list .nav-link.active::after{
-		display: none;
-	}
+	
 	.header{
 		.logo{
 			width: 32px;
@@ -669,6 +741,20 @@
 	.logo{
 		width: 90px;
 	}
+	.model-item__photo__small{
+		width: 80px;
+		height: 80px;
+	}
+	.model-item__photo > a > img{
+		height: 240px;
+		object-fit: cover;
+	}
+	.model__item__options li, .tag-list{
+		font-size: 14px;
+	}
+	.call-to-action--lt .cta-item, .model-item__photo .format, .model-item__photo .duration{
+		font-size: 12px;
+	}
 }
 /*568*/ 
 @media(max-width: 520px){
@@ -728,10 +814,10 @@
 		width: 36px;
 		height: 36px;
 	}
-	::-webkit-input-placeholder {font-family: var(--opensans);font-size: 12px;color: var(--grey);text-transform: capitalize;line-height: 1;transform: translateY(-1px);  }
-	::-moz-placeholder          {font-family: var(--opensans);font-size: 12px;color: var(--grey);text-transform: capitalize;line-height: 1;transform: translateY(-1px);  } /* Firefox 19+ */
-	:-moz-placeholder           {font-family: var(--opensans);font-size: 12px;color: var(--grey);text-transform: capitalize;line-height: 1;transform: translateY(-1px);  } /* Firefox 18- */
-	:-ms-input-placeholder      {font-family: var(--opensans);font-size: 12px;color: var(--grey);text-transform: capitalize;line-height: 1;transform: translateY(-1px);  }
+	::-webkit-input-placeholder {font-family: var(--opensans);font-size: 12px;color: var(--grey);text-transform: capitalize;line-height: 1;transform: translateY(2px);  }
+	::-moz-placeholder          {font-family: var(--opensans);font-size: 12px;color: var(--grey);text-transform: capitalize;line-height: 1;transform: translateY(2px);  } /* Firefox 19+ */
+	:-moz-placeholder           {font-family: var(--opensans);font-size: 12px;color: var(--grey);text-transform: capitalize;line-height: 1;transform: translateY(2px);  } /* Firefox 18- */
+	:-ms-input-placeholder      {font-family: var(--opensans);font-size: 12px;color: var(--grey);text-transform: capitalize;line-height: 1;transform: translateY(2px);  }
 
 }
 /*400*/ 

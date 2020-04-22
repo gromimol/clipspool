@@ -11,6 +11,7 @@ $(document).ready(function () {
 
 	$('#overlay, .close').on('click',function (e) {
 		e.preventDefault();
+		e.stopPropagation();
 
 		$('#overlay, .mobile-menu, .header .submenu, .search-block').removeClass('active');
 		$('body').removeClass('noscroll');
@@ -71,6 +72,13 @@ $(document).ready(function () {
 		e.stopPropagation();
 
 		$(this).toggleClass('active').next('.submenu').toggleClass('active');
+	});
+
+	$('.js-submenu-container').on('click',function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+		$(this).find('.submenu').toggleClass('active');
 	});
 
 	// masonry

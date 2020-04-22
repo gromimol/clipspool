@@ -92,12 +92,12 @@
 								</div>
 							</a>
 							<div class="header-options__item">
-								<div class="legal-user d-flex align-items-center">
+								<div class="legal-user d-flex align-items-center js-submenu-container">
 									<span class="avatar">
 										<img src="img/photos/avatar-user.jpg" alt="">
 									</span>
 									<div class="options">
-										<a href="#" class="dots js-submenu">
+										<a href="#" class="dots">
 											<span class="ico">
 												<svg>
 													<use xlink:href="#svg-dots"></use>
@@ -242,7 +242,7 @@
 								</li>
 							</ul>
 
-							<a href="#" class="d-sm-none filter-btn">
+							<a href="#" class="d-md-none filter-btn">
 								<span class="ico ">
 									<svg>
 										<use xlink:href="#svg-line-group"></use>
@@ -256,7 +256,7 @@
 								<div class="row p-0">
 									<div class="col-auto d-flex flex-wrap align-items-lg-center align-items-end justify-content-between justify-content-sm-start">
 
-										<div class="d-flex justify-content-between d-md-none mt-3 w-100">
+										<div class="d-flex justify-content-between d-md-none w-100">
 											<div class="form-inline form-group flex-nowrap mb-0 checkbox-group mr-3">
 												<div class="form-check form-check-inline mr-0">
 													<input type="radio" name="view" id="all_mobile" class="form-check-input" checked>
@@ -292,7 +292,7 @@
 											</div>
 										</div>
 
-										<div class="form-group mt-3 mb-0 mr-3">
+										<div class="form-group mt-3 mb-0 mr-md-3">
 											<div class="filter__item">
 												<span class="filter__item__title">
 													Model Type
@@ -310,7 +310,7 @@
 											</div>
 										</div>
 
-										<div class="form-group mt-3 mb-0 mr-3">
+										<div class="form-group mt-3 mb-0 mr-md-3">
 											<div class="filter__item">
 												<span class="filter__item__title">
 													Hair Color
@@ -326,7 +326,7 @@
 											</div>
 										</div>
 
-										<div class="form-group mt-3 mb-0 mr-3">
+										<div class="form-group mt-3 mb-0 mr-md-3">
 											<div class="filter__item">
 												<span class="filter__item__title">
 													Category
@@ -433,54 +433,69 @@
 								</div>
 							</div>
 							<div class="col-lg-3 col-md-4 col-sm-6">
-								<div class="model-item">
+								<!-- Class model-item--premium adding blur for image -->
+								<div class="model-item model-item--premium">
 									<div class="model-item__photo">
 										<a href="#">
-											<img src="img/photos/girl-5.jpg" alt="">
+											<img src="img/photos/girl-2.jpg" alt="">
 										</a>
-										<div class="model-item__photo__small">
-											<img src="img/photos/girl-3.jpg" alt="">
+										<div class="premium-item">
+											<div class="lock">
+												<img src="img/icons/lock.svg" alt="">
+											</div>
+											<div class="premium-item__title">
+												For premium members only
+											</div>
+											<div class="call-to-action call-to-action--lt">
+												<a href="#" class="cta-item cta-item--like">
+													<span class="ico">
+														<svg class="heart-border">
+															<use xlink:href="#svg-heart-border"></use>
+														</svg>
+														<svg class="heart-full">
+															<use xlink:href="#svg-heart-full"></use>
+														</svg>
+													</span>
+													<span class="text">
+														890
+													</span>
+												</a>
+
+												<a href="#" class="cta-item">
+													<span class="ico">
+														<svg>
+															<use xlink:href="#svg-eye"></use>
+														</svg>
+													</span>
+													<span class="text">
+														16.7K
+													</span>
+												</a>
+
+												<a href="#" class="cta-item">
+													<span class="ico">
+														<svg>
+															<use xlink:href="#svg-star"></use>
+														</svg>
+													</span>
+													<span class="text">
+														40
+													</span>
+												</a>
+											</div>
 										</div>
 										<div class="duration">2:56</div>
-										<div class="format">4K</div>
+										<div class="format">4k</div>
 									</div>
-
-									<ul class="model__item__options d-flex">
-										<li class="flex flex-column">
-											<span class="count blue">23</span>
-											<span class="subtitle">views</span>
-										</li>
-										<li class="flex flex-column">
-											<span class="count">21</span>
-											<span class="subtitle">likes</span>
-										</li>
-										<li class="flex flex-column">
-											<span class="options-title">
-												Roxy Cox
-											</span>
-											<span class="location d-flex flex-center">
-												<span class="ico">
-													<svg>
-														<use xlink:href="#svg-pin"></use>
-													</svg>
-												</span>
-												New York, NY
-											</span>
-										</li>
-									</ul>
-
+									
 									<div class="model__item__row d-flex align-items-center justify-content-between">
-										<ul class="tag-list">
-											<li><a href="#">Thirsty Girl dildo blow</a></li>
-										</ul>
-
-										<a href="#" class="btn btn--lt btn--round btn--border-grey">
-											<span class="ico ico--white">
-												<svg>
-													<use xlink:href="#svg-cart"></use>
-												</svg>
-											</span>
-											<span class="text dollar">34.99</span>
+										<p class="red premium-text">
+											<b>
+												For premium members only
+											</b>
+										</p>
+										<a href="#" class="btn btn--red">
+											<span class="text">Get premium</span>
 										</a>
 									</div>
 								</div>
@@ -1437,16 +1452,13 @@
 						<div class="row">
 							<div class="col">
 								<ul class="pagination flex-wrap justify-content-center">
-									<li class="page-item"><a href="#" class="prev-page page-link"><span>previous</span></a></li>
+									<li class="page-item"><a href="#" class="prev-page page-link"><span class="d-none d-sm-inline">previous</span></a></li>
 									<li class="page-item"><a href="#" class="page-link">1</a></li>
 									<li class="page-item"><a href="#" class="page-link active">2</a></li>
 									<li class="page-item"><a href="#" class="page-link">3</a></li>
-									<li class="page-item"><a href="#" class="page-link">4</a></li>
-									<li class="page-item"><a href="#" class="page-link">5</a></li>
 									<li class="page-item">...</li>
-									<li class="page-item"><a href="#" class="page-link">10</a></li>
 									<li class="page-item"><a href="#" class="page-link">11</a></li>
-									<li class="page-item"><a href="#" class="page-link next-page"><span>next</span></a></li>
+									<li class="page-item"><a href="#" class="page-link next-page"><span class="d-none d-sm-inline">next</span></a></li>
 								</ul>
 							</div>
 						</div>
@@ -2528,7 +2540,7 @@
 						<div class="row">
 							<div class="col">
 								<ul class="pagination flex-wrap justify-content-center">
-									<li class="page-item"><a href="#" class="prev-page page-link"><span>previous</span></a></li>
+									<li class="page-item"><a href="#" class="prev-page page-link"><span class="d-none d-sm-inline">previous</span></a></li>
 									<li class="page-item"><a href="#" class="page-link">1</a></li>
 									<li class="page-item"><a href="#" class="page-link active">2</a></li>
 									<li class="page-item"><a href="#" class="page-link">3</a></li>
@@ -2537,7 +2549,7 @@
 									<li class="page-item">...</li>
 									<li class="page-item"><a href="#" class="page-link">10</a></li>
 									<li class="page-item"><a href="#" class="page-link">11</a></li>
-									<li class="page-item"><a href="#" class="page-link next-page"><span>next</span></a></li>
+									<li class="page-item"><a href="#" class="page-link next-page"><span class="d-none d-sm-inline">next</span></a></li>
 								</ul>
 							</div>
 						</div>
@@ -3618,7 +3630,7 @@
 						<div class="row">
 							<div class="col">
 								<ul class="pagination flex-wrap justify-content-center">
-									<li class="page-item"><a href="#" class="prev-page page-link"><span>previous</span></a></li>
+									<li class="page-item"><a href="#" class="prev-page page-link"><span class="d-none d-sm-inline">previous</span></a></li>
 									<li class="page-item"><a href="#" class="page-link">1</a></li>
 									<li class="page-item"><a href="#" class="page-link active">2</a></li>
 									<li class="page-item"><a href="#" class="page-link">3</a></li>
@@ -3627,7 +3639,7 @@
 									<li class="page-item">...</li>
 									<li class="page-item"><a href="#" class="page-link">10</a></li>
 									<li class="page-item"><a href="#" class="page-link">11</a></li>
-									<li class="page-item"><a href="#" class="page-link next-page"><span>next</span></a></li>
+									<li class="page-item"><a href="#" class="page-link next-page"><span class="d-none d-sm-inline">next</span></a></li>
 								</ul>
 							</div>
 						</div>
@@ -4708,16 +4720,14 @@
 						<div class="row">
 							<div class="col">
 								<ul class="pagination flex-wrap justify-content-center">
-									<li class="page-item"><a href="#" class="prev-page page-link"><span>previous</span></a></li>
+									<li class="page-item"><a href="#" class="prev-page page-link"><span class="d-none d-sm-inline">previous</span></a></li>
 									<li class="page-item"><a href="#" class="page-link">1</a></li>
 									<li class="page-item"><a href="#" class="page-link active">2</a></li>
 									<li class="page-item"><a href="#" class="page-link">3</a></li>
-									<li class="page-item"><a href="#" class="page-link">4</a></li>
-									<li class="page-item"><a href="#" class="page-link">5</a></li>
 									<li class="page-item">...</li>
 									<li class="page-item"><a href="#" class="page-link">10</a></li>
 									<li class="page-item"><a href="#" class="page-link">11</a></li>
-									<li class="page-item"><a href="#" class="page-link next-page"><span>next</span></a></li>
+									<li class="page-item"><a href="#" class="page-link next-page"><span class="d-none d-sm-inline">next</span></a></li>
 								</ul>
 							</div>
 						</div>
@@ -4739,7 +4749,7 @@
 						<a href="#" class="logo">
 							<img src="img/cp-logo-white.svg" alt="">
 						</a>
-						<ul class="social social--lt d-flex">
+						<ul class="social social--lt d-none d-sm-flex">
 							<li>
 								<a href="#">
 									<span class="ico">
@@ -4796,6 +4806,45 @@
 							<li><a href="#" class="blue">LOGIN</a></li>
 							<li>
 								<a href="#" class="btn btn--blue"><span>sign up</span></a>
+							</li>
+						</ul>
+
+						<ul class="social social--lt d-flex d-sm-none">
+							<li>
+								<a href="#">
+									<span class="ico">
+										<svg>
+											<use xlink:href="#svg-fb"></use>>
+										</svg>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="ico">
+										<svg>
+											<use xlink:href="#svg-tw"></use>>
+										</svg>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="ico">
+										<svg>
+											<use xlink:href="#svg-snap"></use>>
+										</svg>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="ico">
+										<svg>
+											<use xlink:href="#svg-inst"></use>>
+										</svg>
+									</span>
+								</a>
 							</li>
 						</ul>
 
