@@ -814,10 +814,10 @@
 		width: 36px;
 		height: 36px;
 	}
-	::-webkit-input-placeholder {font-family: var(--opensans);font-size: 12px;color: var(--grey);text-transform: capitalize;line-height: 1;transform: translateY(2px);  }
-	::-moz-placeholder          {font-family: var(--opensans);font-size: 12px;color: var(--grey);text-transform: capitalize;line-height: 1;transform: translateY(2px);  } /* Firefox 19+ */
-	:-moz-placeholder           {font-family: var(--opensans);font-size: 12px;color: var(--grey);text-transform: capitalize;line-height: 1;transform: translateY(2px);  } /* Firefox 18- */
-	:-ms-input-placeholder      {font-family: var(--opensans);font-size: 12px;color: var(--grey);text-transform: capitalize;line-height: 1;transform: translateY(2px);  }
+	::-webkit-input-placeholder {font-family: var(--opensans);font-size: 12px;color: var(--grey);text-transform: capitalize;line-height: 1;  }
+	::-moz-placeholder          {font-family: var(--opensans);font-size: 12px;color: var(--grey);text-transform: capitalize;line-height: 1;  } /* Firefox 19+ */
+	:-moz-placeholder           {font-family: var(--opensans);font-size: 12px;color: var(--grey);text-transform: capitalize;line-height: 1;  } /* Firefox 18- */
+	:-ms-input-placeholder      {font-family: var(--opensans);font-size: 12px;color: var(--grey);text-transform: capitalize;line-height: 1;  }
 
 }
 /*400*/ 

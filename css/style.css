@@ -12045,17 +12045,14 @@ a.model-item__title:hover {
     font-size: 12px;
     color: var(--grey);
     text-transform: capitalize;
-    line-height: 1;
-    -webkit-transform: translateY(2px);
-            transform: translateY(2px); }
+    line-height: 1; }
 
   ::-moz-placeholder {
     font-family: var(--opensans);
     font-size: 12px;
     color: var(--grey);
     text-transform: capitalize;
-    line-height: 1;
-    transform: translateY(2px); }
+    line-height: 1; }
 
   /* Firefox 19+ */
   :-moz-placeholder {
@@ -12063,8 +12060,7 @@ a.model-item__title:hover {
     font-size: 12px;
     color: var(--grey);
     text-transform: capitalize;
-    line-height: 1;
-    transform: translateY(2px); }
+    line-height: 1; }
 
   /* Firefox 18- */
   :-ms-input-placeholder {
@@ -12072,8 +12068,7 @@ a.model-item__title:hover {
     font-size: 12px;
     color: var(--grey);
     text-transform: capitalize;
-    line-height: 1;
-    transform: translateY(2px); } }
+    line-height: 1; } }
 /*400*/
 @media (max-width: 360px) {
   .nav-tabs,
