@@ -11444,8 +11444,7 @@ a.model-item__title:hover {
   .social li a {
     width: 25px;
     height: 25px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 1px solid #fff; }
+    background-color: rgba(0, 0, 0, 0.7); }
 
   .social-icon {
     width: 60%;
@@ -11697,7 +11696,15 @@ a.model-item__title:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    max-width: 120px; } }
+    max-width: 120px; }
+
+  .footer__right .main-menu {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+
+  .footer .logo {
+    margin-bottom: 20px; } }
 /*992*/
 @media (max-width: 768px) {
   .models-header__data {
