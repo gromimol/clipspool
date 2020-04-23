@@ -11354,7 +11354,7 @@ a.model-item__title:hover {
     margin-bottom: 20px; }
 
   .tab-list .nav-link {
-    font-size: 13px; } }
+    font-size: 12px; } }
 /*1500*/
 @media (max-width: 1280px) {
   html {
@@ -11533,11 +11533,59 @@ a.model-item__title:hover {
     font-size: 13px; }
 
   .model__item__options--lg .subtitle {
+    font-size: 10px; }
+
+  .tab-list .nav-link {
     font-size: 10px; } }
 /*1280*/
 @media (max-width: 1200px) {
   .title-row .h2 {
-    margin-bottom: 15px; } }
+    margin-bottom: 15px; }
+
+  .filter-container {
+    padding-top: 20px;
+    margin-top: 20px;
+    position: relative; }
+    .filter-container::before {
+      content: '';
+      width: calc(100% + 30px);
+      left: -15px;
+      top: 0;
+      position: absolute;
+      height: 1px;
+      background-color: #e5e5e5; }
+
+  .filter-container {
+    display: none !important;
+    width: 100%; }
+    .filter-container.visible {
+      display: -moz-flex !important;
+      display: -ms-flex !important;
+      display: -o-flex !important;
+      display: -webkit-box !important;
+      display: -ms-flexbox !important;
+      display: flex !important; }
+
+  .option-row .tab-list .nav-item:first-child .nav-link {
+    border-radius: 5px 0 0 5px; }
+
+  .tab-list .nav-item:last-child .nav-link {
+    border-radius: 0 5px 5px 0; }
+
+  .option-row .nav-tabs {
+    border: none; }
+
+  .option-row .page-features {
+    padding-bottom: 20px; }
+
+  .option-row .tab-list .nav-link {
+    border-bottom: 1px solid var(--border-color); }
+
+  .option-row .tab-list .nav-link.active::after {
+    display: none; }
+
+  .premium-text {
+    max-width: 50%; } }
 /*1200*/
 @media (max-width: 992px) {
   html {
@@ -11637,7 +11685,19 @@ a.model-item__title:hover {
     height: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; } }
+            align-items: center; }
+
+  .premium-text,
+  .premium-text + .btn {
+    width: 47%;
+    font-size: 12px; }
+
+  .premium-text + .btn {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 120px; } }
 /*992*/
 @media (max-width: 768px) {
   .models-header__data {
@@ -11758,11 +11818,6 @@ a.model-item__title:hover {
     padding: 0 .7em;
     margin-bottom: 30px; }
 
-  .footer__right .main-menu li:last-child,
-  .footer__right .main-menu li:nth-last-child(2) {
-    width: 30%;
-    text-align: center; }
-
   .page-link.prev-page, .page-link.next-page {
     width: 40px;
     height: 40px;
@@ -11777,50 +11832,10 @@ a.model-item__title:hover {
   .premium-text + .btn {
     font-size: 12px; }
 
-  .filter-container {
-    padding-top: 20px;
-    margin-top: 20px;
-    position: relative; }
-    .filter-container::before {
-      content: '';
-      width: calc(100% + 30px);
-      left: -15px;
-      top: 0;
-      position: absolute;
-      height: 1px;
-      background-color: #e5e5e5; }
-
-  .filter-container {
-    display: none !important; }
-    .filter-container.visible {
-      display: -moz-flex !important;
-      display: -ms-flex !important;
-      display: -o-flex !important;
-      display: -webkit-box !important;
-      display: -ms-flexbox !important;
-      display: flex !important; }
-    .filter-container .search-form {
-      max-width: 300px; }
-    .filter-container .form-group {
-      width: 47%; }
-
-  .option-row .tab-list .nav-item:first-child .nav-link {
-    border-radius: 5px 0 0 5px; }
-
-  .tab-list .nav-item:last-child .nav-link {
-    border-radius: 0 5px 5px 0; }
-
-  .option-row .nav-tabs {
-    border: none; }
-
-  .option-row .page-features {
-    padding-bottom: 20px; }
-
-  .option-row .tab-list .nav-link {
-    border-bottom: 1px solid var(--border-color); }
-
-  .option-row .tab-list .nav-link.active::after {
-    display: none; } }
+  .filter-container .search-form {
+    max-width: 300px; }
+  .filter-container .form-group {
+    width: 47%; } }
 /*767*/
 @media (max-width: 575px) {
   .models-header {
@@ -12000,7 +12015,10 @@ a.model-item__title:hover {
 
   .filter-btn {
     width: 40px;
-    height: 40px; } }
+    height: 40px; }
+
+  .premium-text, .premium-text + .btn {
+    width: auto; } }
 /*450*/
 @media (max-width: 400px) {
   .models-header__btns {
