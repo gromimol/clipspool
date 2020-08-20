@@ -913,24 +913,3 @@
 		font-size: 12px;
 	}
 }
-.tags-line__title{
-	font-size: 14px;
-	color: #c1c1c1;
-	margin-right: 5px;
-}
-.tag{
-	margin-left: 5px;
-	display: inline-block;
-	border-radius: 5px;
-	border: 1px solid #d4d5d7;
-	background-color: #ffffff;
-	font-size: 14px;
-	color: var(--black);
-	padding: 8px 10px;
-	line-height: 1;
-	&:hover{
-		background-color: var(--blue);
-		color: #fff;
-		border-color: var(--blue);
-	}
-}

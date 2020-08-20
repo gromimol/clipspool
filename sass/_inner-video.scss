@@ -120,8 +120,45 @@
 	width: 40px;
 	height: 40px;
 }
+.sale-option{
+	.badge{
+		font-size: 12px;
+		color: #fff;
+		background-color: var(--red);
+		padding: 5px 10px;
+		border-radius: 5px;
+	}
+	.old-price{
+		text-decoration: line-through;
+		font-size: 16px;
+		font-weight: 700;
+	}
+}
+.tags-line__title{
+	font-size: 14px;
+	color: #c1c1c1;
+	margin-right: 5px;
+	padding-top: 5px;
+}
 
-
+.tag{
+	margin-left: 5px;
+	margin-bottom: 5px;
+	display: inline-block;
+	border-radius: 5px;
+	border: 1px solid #d4d5d7;
+	background-color: #ffffff;
+	font-size: 14px;
+	color: var(--black);
+	padding: 8px 10px;
+	line-height: 1;
+	&:hover{
+		background-color: var(--blue);
+		color: #fff;
+		border-color: var(--blue);
+		box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2), inset 0 3px 3px rgba(80, 125, 232, 0.53);
+	}
+}
 
 
 
