@@ -1,0 +1,131 @@
+/*inner video*/ 
+.inner-slider__main__slide{
+	position: relative;
+}
+.inner-slider__main{
+	margin-bottom: 15px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.inner-subslider{
+	border-radius: 5px;
+	overflow: hidden;
+	.slick-arrow{
+		position: absolute;
+		top: 0;
+		height: 100%;
+		background-color: #eee;
+		width: 30px;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #9a9a9a;
+		transition: all .3s;
+		z-index: 2;
+		&:hover{
+			background-color: var(--black);
+			color: #fff
+		}
+	}
+	.prev-slide{
+		border-radius: 5px 0 0 5px;
+		left: 0;
+		background-image: url('../img/');
+	}
+	.next-slide{
+		border-radius: 0 5px 5px 0;
+		right: 0;
+	}
+}
+.inner-subslide{
+	padding: 0 5px;
+	outline: none;
+	position: relative;
+	line-height: 0;
+	&::before{
+		content: '';
+		width: calc(100% - 10px);
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 5px;
+		border-radius: 5px;
+		background: rgba(#000, .7) url('../img/icons/lupa.svg') center no-repeat;
+		opacity: 0;
+		transition: opacity .3s;
+	}
+	&.slick-center{
+		&::before{
+			opacity: 1;
+		}
+		img{
+			border-color: var(--blue);
+		}
+	}
+	img{
+		border: 2px solid transparent;
+		border-radius: 5px;
+	}
+}
+.price{
+	font-size: 2rem;
+	letter-spacing: 0.03125em;
+}
+.model-data{
+	font-size: 13px;
+}
+.share-btn{
+	margin-left: 30px;
+	padding-left: 30px;
+	position: relative;
+	&::before{
+		content: '';
+		width: 1px;
+		height: 40px;
+		background-color: rgba(#000, .5);
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+.share-link{
+	width: 40px;
+	height: 40px;
+	border: 1px solid #a9a9a8;
+	box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	color: var(--black);
+	&:hover{
+		background-color: var(--blue);
+		border-color: var(--blue);
+		color: #fff;
+	}
+	svg{
+		width: 60%;
+		height: 60%;
+	}
+}
+.count,
+.avatar__data{
+	font-size: 13px;
+}
+.inner-page-nav.nav{
+	height: auto;
+	.nav-link{
+		padding: 20px 0;
+	}
+}
+.finger{
+	width: 40px;
+	height: 40px;
+}
+
+
+
+
+
+
+
+
+
